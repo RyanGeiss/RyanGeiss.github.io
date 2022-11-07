@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment6</title>
+</head>
+
+<body>
+	<form>
+		<section>
+			<h1 id="header">Welcome to the Page!</h1>
+			<label for="city">City: </label>
+			<input type="text" id="city" name="city" onkeypress="enterKeyPress(event)"/><br>
+			<script>
+				function enterKeyPress(event){
+					if(event.keyCode == 13){
+						const heading = document.getElementById('header');
+					heading.textContent = 'I love ' + document.getElementById('city').value;
+						return true;
+					}else{return false;}
+				}
+			</script>
+			<label for="mascot">Mascot: </label>
+			<input type="text" id="mascot" name="mascot"><br>
+			<label for="team">Favorite Team: </label>
+			<input type="text" id="team" name="team">
+		</section>
+		<section>
+			<input type="checkbox" id="wind" name="wind" value="Wind" onClick="validate()">
+			<label for="wind">Wind</label><br>
+			<input type="checkbox" id="rain" name="rain" value="Rain" onClick="validate()">
+			<label for="rain">Rain</label><br>
+			<input type="checkbox" id="sleet" name="sleet" value="Sleet" onClick="validate()">
+			<label for="sleet">Sleet</label><br>
+			<input type="checkbox" id="snow" name="snow" value="Snow" onClick="validate()">
+			<label for="snow">Snow</label><br>
+			<script>
+				function validate(){
+					if(wind.checked == 1){
+						alert("It is windy outside.")
+					}
+					if(rain.checked == 1){
+						alert("It is rainy outside.")
+					}
+					if(sleet.checked == 1){
+						alert("It is sleeting outside.")
+					}
+					if(snow.checked == 1){
+						alert("It is snowing outside.")
+					}
+				}
+			</script>
+		</section>
+		<input type="reset" id="clear">
+	</form>
+</body>
+</html>
