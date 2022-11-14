@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment7</title>
+</head>
+
+<body>
+	<form>
+		<section>
+			<h2>Choose a background</h2>
+			<button id="red" onClick="document.body.style.backgroundColor = 'red';">Make it Red!</button>
+			<button id="green" onClick="changebackground('green')">Make it Green!</button>
+			<button id="blue" onClick="changebackground('blue')">Make it Blue!</button>
+			<button id="white" onClick="changebackground('white')">Make it White!</button>
+			<script>
+				function changebackground(color){
+					document.body.style.backgroundColor= color;
+				}
+			</script>
+		</section>
+		<section>
+			<h2>Juniata Calculator</h2>
+			<input type="text" id="firstnum" >
+			<button id="addnum" onClick="resulted()">+</button>
+			<button id="subnum" onClick="resulted()">-</button>
+			<button id="mulnum" onClick="resulted()">*</button>
+			<button id="divnum" onClick="resulted()">/</button>
+			<input type="text" id="secondnum">
+			<p><strong>=</strong></p>
+			<input type="text" id="output" readOnly>
+			<script>
+				function display(){
+					
+				}
+				function resulted(){
+				const result = 0;
+				const addoperator = document.getElementById("addnum");
+				const suboperator = document.getElementById("subnum");
+				const multoperator = document.getElementById("mulnum");
+				const divoperator = document.getElementById("divnum");
+				const firstnum = parseFloat(document.getElementById("firstnum"));
+				const secnum = parseFloat(document.getElementById("secondnum"));
+				const output = document.getElementById("output").value;
+					if(addoperator == '+'){
+						parseFloat(result) = firstnum + secnum;
+						output = result;
+					}
+					if(suboperator == '-'){
+						parseFloat(result) = firstnum - secnum;
+						output = result;
+					}
+					if(multoperator == '*'){
+						parseFloat(result) = firstnum * secnum;
+						output = result;
+					}
+					if(divoperator == '/'){
+						parseFloat(result) = firstnum / secnum;
+						output = result;
+					}
+					else{
+						alert("Invalid operator!")
+					}
+				}
+				
+			</script>
+		</section>
+		<section>
+			<h2>Summation! You decided where it starts and where it ends</h2>
+			<p>Where would you like to start the summation?</p>
+			<input type="text" id="firstsum">
+			<p>Where would you like to end the summation?</p>
+			<input type="text" id="secondsum"><br><br>
+			<button id="letsgo" onClick="">Lets Go!</button>
+			<p id="sumoutput">Here's the summation for that range.</p>
+			<script>
+				function sums(){
+					const num = document.getElementById("firstsum").value;
+				const num2 = document.getElementById("secondsum").value;
+				const summation = (num = 1) => {
+					let res = num2;
+					for(let i = 1; i <= num; i++){
+						res += i;
+					}
+					return res;
+					const out = document.getElementById("sumoutput");
+				out.textContent = res;	
+				}
+				}
+			</script>
+		</section>
+		<input type="reset" id="clear" value="Clear Page Entries">
+	</form>
+</body>
+</html>
