@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<title>Coding Survey</title>
+<h1 style="font-size: 50px; font-family: Cambria; ">Coding Survey</h1>
+</head>
+
+<body style="font-family: Cambria;">
+	<form>
+	<section>
+		<h2>Name and General Coding Information: </h2>
+		<table>
+			<form>
+				<tr>
+					<td>
+						<label for="name">First and last name:</label><br>
+					</td>
+					<td>
+						<input type="text" id="name" name="name"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="firstlang">First coding language?: </label><br>
+					</td>
+					<td>
+					<input type="text" id="firstlang" name="firstlang"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="yearsprog">Years of knowledge: </label><br>
+					</td>
+					<td>
+					<input type="text" id="yearsprog" name="yearsprog"></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="fromwhere">Learned from where?</label><br>
+					</td>
+					<td>
+					<input type="text" id="fromwhere" name="fromwhere"></td>
+				</tr>
+			</form>
+		</table>
+	</section>
+	<section>
+		<h2>Best Methods to Learn Programming: </h2>
+		<form>
+		  <input type="radio" id="mselftaught" name="options">
+		  <label for="delivery">Self-taught</label><br>
+		  <input type="radio" id="minstructor" name="options">
+		  <label for="pickup">Instructor-led (via college)</label><br>
+		  <input type="radio" id="mboth" name="options">
+		  <label for="dinein">Both</label>
+		</form>
+		<br>
+		<textarea id="explainT" rows="4" cols="40" placeholder="Enter an explaination why you believe this option is best for learning programming..."></textarea>
+	</section>
+	<section>
+		<h2>Top Three Programming Languages You Know:</h2>
+		<form id="languages">
+			<input type="checkbox" id="python">
+			<label for="python">Python</label><br>
+			<input type="checkbox" id="java">
+			<label for="java">Java</label><br>
+			<input type="checkbox" id="c++">
+			<label for="c++">C++</label><br>
+			<input type="checkbox" id="html">
+			<label for="html">HTML/CSS/JavaScript</label><br>
+			<input type="checkbox" id="c#">
+			<label for="c#">C#</label><br>
+			<input type="checkbox" id="ruby">
+			<label for="ruby">Ruby</label><br>
+			<input type="checkbox" id="fortran">
+			<label for="fortran">FORTRAN</label><br>
+		</form>
+	</section>
+	<section>
+		<h2>Favorite CS/IT Juniata Professor: </h2>
+		<form>
+			<label for="professors">Choose a professor:</label>
+
+				<select name="professors" id="professors">
+				  <option name="kruse" onClick="profpicked()">Dr. Gerald W. Kruse</option>
+				  <option name="thomas">Dr. William H. Thomas</option>
+				  <option name="wright">Dr.John J. Wright</option>
+				  <option name="burkhardt">Dr. Marlene Burkhardt</option>
+				  <option name="pheasant">Dr. Joel C. Pheasant</option>
+				  <option value="neville">Elainea Neville</option>
+				</select> 
+				<script>
+					function profpicked(){
+						if(document.getElementById("professors").options[document.getElementById("professors")].text == document.getElementsByName("kruse").value){
+							alert("Great choice! Thank you for a fantastic semester! I look forward to seeing you in class next semester :) !");
+							// since this doesn't work, if you find this Dr. Kruse, you found my easter egg/broken code lola
+						}else{alert("Good choice!")}
+					}
+				</script>
+		</form>
+	</section>
+		<br>
+		<button type="submit" value ="submit" disabled>Submit</button>
+	</form>
+	<button type="reset" value="reset">Reset</button>
+</body>
+</html>

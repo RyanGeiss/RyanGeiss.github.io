@@ -1,10 +1,16 @@
 body{
-	background-image: url('https://t4.ftcdn.net/jpg/02/75/92/41/360_F_275924184_GP4ACV80EK8NokxlFaUB2qykpXKrroqx.jpg');
+	background-image: url('https://img.freepik.com/free-vector/gradient-background-vector-spring-colors_53876-117271.jpg?w=2000');
 }
-h1{
-	color: red;
+#main_title{
+	color: whitesmoke;
+	font-family: Cambria;
+	font-size: 46px;
+	align-self: center;
 }
 #deliverinstr{
 	background-color: grey;
 	font-family: Gill Sans;
 }
+table{font-size: 24px; font-weight: bolder}
+h2{color: white; font-size: 36px;}
+#languages{color: white; font-size: 23px;}

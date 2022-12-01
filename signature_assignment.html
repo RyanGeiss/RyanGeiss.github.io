@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- Ryan Geissinger - Signature Assignment - 11/26/2022 -->
+<html>
+<head><center>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<title>Signature Assignment</title>
+<h1 id="main_title">The Beauty of Web Programming and Design</h1>
+<a href="coding_survey.html"><input type="button" value="Coding Survey"></a>
+<a href="classes.html"><input type="button" value="Classes"></a>
+</center></head>
+
+<body><center>
+	<section>
+	<h1 style="font-family:Cambria;color: white;"> -- ABOUT WEB PROGRAMMING AND DESIGN -- </h1>
+	<p style="padding-right: 175px;padding-left: 175px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+	<br>
+	</section>
+	<section style="border: 2px solid white; padding: 25px; margin-right: 250px; margin-left: 250px;">
+		<h1 style="font-family:Cambria; border: 1px white solid;">HTML/Javascript Test:</h1>
+		<p style="font-size: 9px;">**Press Enter to change header and background**</p>
+		<label for="header_change">Header Change: </label>
+		<input id="header_change" type="text" value onKeyPress="changeText(event)">
+		<br><br>
+		<label for="background_img">Background Image URL:</label>
+		<input id="background_img" type="text"  onKeyPress="changeBackground(event)">
+		<script>
+			function changeText(event){
+				if(event.keyCode == 13){
+					const heading = document.getElementById('main_title');
+				heading.textContent = (document.getElementById('header_change').value);
+					alertUser();
+				}else{return false;}
+			}
+			let head = document.querySelector('#background_img');
+			head.addEventListener('')
+			function changeBackground(event){
+				if(event.keyCode == 13){
+					
+					const imageURL = document.getElementById("background_img").value;
+					document.body.style.backgroundImage = "url('"+imageURL+"')";
+				}
+			}
+			function alertUser(){
+				alert("Header changed.");
+			}
+		</script>
+	</section>
+</center></body>
+<footer><center>
+	<br>
+	<p style="font-size:7pt">Signature Assignment created by Ryan Geissinger for Principles of Programming. (11/23/2022) </p>
+</center></footer>
+</html>
